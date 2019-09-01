@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'echo "Builiding ..."'
                 sleep 5
-                snDevOpsStep (stepSysId:'0c605766536333007109ddeeff7b12c8', disabled: true)
+                snDevOpsStep (stepSysId:'0c605766536333007109ddeeff7b12c8', disabled: false)
             }
         }
         stage('DeployDEV') {
@@ -19,7 +19,7 @@ pipeline {
           steps {
               sh 'echo "Deploying to prod ..."'
               sleep 7
-              snDevOpsStep 'd271ec29531333007109ddeeff7b12c1'
+              snDevOpsStep '80605766536333007109ddeeff7b12c8'
           }
        }
     }
